@@ -326,8 +326,3 @@ print(len(sequence))
 ---
 
 *Ready to start your Python journey? Turn the page and let's write your first program!*
-
----
-
-## INSERT THIS ENTIRE SECTION AS PAGE 2 OF YOUR PDF
-## (After title page, before "Introduction to Python")
