@@ -223,57 +223,6 @@ Remember: Every programmer, even experts, encounters errors daily. The differenc
 
 ---
 
-# After This Guide: Next Steps
-
-Once you've completed this guide:
-
-### Immediate Next Steps:
-1. **Practice with your own data** - Apply what you learned to your research
-2. **Try Rosalind.info** - Bioinformatics programming challenges
-3. **Explore Biopython docs** - Go deeper into the library we introduced
-4. **Join communities** - r/bioinformatics, Stack Overflow
-
-### Advanced Learning:
-1. **"Advanced Python for Bioinformatics"** (coming 2026)
-   - NGS data processing
-   - Pipeline development  
-   - Database integration
-   - API usage
-   - Production workflows
-
-2. **Specialized topics based on your field:**
-   - Genomics: Learn pandas, NumPy for large datasets
-   - Structural biology: Learn PyMOL, molecular modeling
-   - Proteomics: Learn mass spec data analysis
-   - Machine learning: Learn scikit-learn for predictive models
-
----
-
-# Getting Help
-
-### While Using This Guide:
-
-**If you get stuck:**
-- Reread the relevant section slowly
-- Try the example in small steps
-- Check for typos in your code
-- Search the error message online
-- Email me: [YOUR_EMAIL]
-
-**If something is unclear:**
-- Email me with the page number
-- I'm happy to clarify concepts
-- Your feedback helps improve future versions
-
-### Community Resources:
-
-- **r/bioinformatics** - Active subreddit for questions
-- **r/learnpython** - Python beginners welcome
-- **Stack Overflow** - Search first, then ask
-- **Biostars** - Bioinformatics Q&A site
-
----
-
 # A Word of Encouragement
 
 Learning to code as a biologist can feel overwhelming. You might think:
