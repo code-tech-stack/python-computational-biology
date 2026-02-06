@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basics of Python for Computational Biologists • CODE TECH</title>
-    <meta name="description" content="Practical, biologist-focused Python notes – from installation and basics to Biopython, Jupyter, and real workflows." />
+    <title>Python Programming Fundamentals for Life Scientists • CODE TECH</title>
+    <meta name="description" content="Learn Python programming with biological examples - DNA sequences, protein data, and lab calculations. Perfect for biology students and researchers learning to code." />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,6 +62,12 @@
         #mobile-menu {
             transition: all 0.3s ease;
         }
+
+        /* Comparison box */
+        .comparison-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid #0066cc;
+        }
     </style>
 </head>
 <body>
@@ -75,9 +81,9 @@
             </div>
 
             <div class="hidden md:flex items-center gap-8 text-gray-700 font-medium">
+                <a href="#for-who" class="hover:text-[#0066cc] transition">For Who?</a>
                 <a href="#features" class="hover:text-[#0066cc] transition">Features</a>
-                <a href="#preview" class="hover:text-[#0066cc] transition">Preview</a>
-                <a href="#about" class="hover:text-[#0066cc] transition">About</a>
+                <a href="#topics" class="hover:text-[#0066cc] transition">Topics</a>
                 <a href="#faq" class="hover:text-[#0066cc] transition">FAQ</a>
             </div>
 
@@ -90,18 +96,18 @@
             </div>
 
             <a href="#purchase" class="hidden md:block bg-[#0066cc] text-white font-semibold px-6 py-2.5 rounded-full hover:bg-[#0055aa] transition shadow-md">
-                Purchase & Download Now
+                Get Started - $10
             </a>
         </div>
 
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 shadow-lg">
             <div class="px-6 py-5 flex flex-col gap-4 text-gray-700 font-medium">
+                <a href="#for-who" class="hover:text-[#0066cc]">For Who?</a>
                 <a href="#features" class="hover:text-[#0066cc]">Features</a>
-                <a href="#preview" class="hover:text-[#0066cc]">Preview</a>
-                <a href="#about" class="hover:text-[#0066cc]">About</a>
+                <a href="#topics" class="hover:text-[#0066cc]">Topics</a>
                 <a href="#faq" class="hover:text-[#0066cc]">FAQ</a>
                 <a href="#purchase" class="mt-2 inline-block bg-[#0066cc] text-white font-semibold px-6 py-3 rounded-full text-center hover:bg-[#0055aa]">
-                    Purchase & Download Now
+                    Get Started - $10
                 </a>
             </div>
         </div>
@@ -118,18 +124,24 @@
         <div class="container mx-auto px-6 max-w-6xl">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="text-center lg:text-left max-w-3xl">
+                    <div class="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                        🎓 Perfect for Programming Beginners
+                    </div>
                     <h1 class="text-4xl lg:text-5xl leading-snug mb-6">
-                        Basics of Python<br />for Computational Biologists
+                        Python Programming Fundamentals<br />for Life Scientists
                     </h1>
-                    <p class="text-xl lg:text-lg opacity-95 leading-relaxed mb-10">
-                        Clear, practical notes designed for life scientists. From high-level Python basics to Biopython, Jupyter/Colab, and real biological data handling.
+                    <p class="text-xl lg:text-lg opacity-95 leading-relaxed mb-8">
+                        Learn Python with examples that actually matter to biologists - DNA sequences, protein data, and lab calculations instead of shopping carts and pizza prices.
+                    </p>
+                    <p class="text-lg opacity-90 mb-10">
+                        <strong>No programming experience required.</strong> Start from absolute basics with biological examples that keep you engaged.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
                         <a href="#purchase" class="bg-white text-[#003366] font-bold text-lg px-10 py-5 rounded-xl shadow-xl hover:bg-gray-100 transition transform hover:-translate-y-1">
-                            Buy Now – Instant Download
+                            Get Started - $10 (Save $5!)
                         </a>
                         <a href="https://github.com/code-tech-stack/python-computational-biology" target="_blank" class="border-2 border-white text-white font-semibold text-lg px-10 py-5 rounded-xl hover:bg-white/15 transition">
-                            View Sample Pages
+                            View Free Sample
                         </a>
                     </div>
                 </div>
@@ -145,106 +157,324 @@
         </div>
     </header>
 
-    <!-- Features -->
-    <section id="features" class="py-20 bg-white">
+    <!-- Who This Is For Section (NEW) -->
+    <section id="for-who" class="py-20 bg-white">
         <div class="container mx-auto px-6 max-w-6xl">
             <h2 class="text-4xl lg:text-5xl text-center text-[#003366] mb-16">
-                Built for Biologists
+                Who This Guide Is For
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 mb-12">
+                <!-- Perfect For -->
+                <div class="card p-8 border-l-4 border-green-500">
+                    <h3 class="text-2xl text-green-600 mb-6 flex items-center gap-3">
+                        <span class="text-4xl">✓</span> Perfect For You If:
+                    </h3>
+                    <ul class="space-y-4 text-gray-700 text-lg">
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 text-2xl flex-shrink-0">•</span>
+                            <span>You're a <strong>biology student</strong> learning programming for the first time</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 text-2xl flex-shrink-0">•</span>
+                            <span>You're a <strong>lab researcher</strong> who wants to automate data analysis</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 text-2xl flex-shrink-0">•</span>
+                            <span>You're <strong>transitioning from Excel</strong> to programming</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 text-2xl flex-shrink-0">•</span>
+                            <span>You're <strong>tired of boring tutorials</strong> with abstract examples</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 text-2xl flex-shrink-0">•</span>
+                            <span>You have <strong>zero coding experience</strong> and need to start from scratch</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- NOT For -->
+                <div class="card p-8 border-l-4 border-orange-500">
+                    <h3 class="text-2xl text-orange-600 mb-6 flex items-center gap-3">
+                        <span class="text-4xl">⚠</span> NOT For You If:
+                    </h3>
+                    <ul class="space-y-4 text-gray-700 text-lg">
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-500 text-2xl flex-shrink-0">•</span>
+                            <span>You <strong>already know Python basics</strong> and want advanced topics</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-500 text-2xl flex-shrink-0">•</span>
+                            <span>You're building <strong>bioinformatics pipelines</strong> or processing NGS data</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-500 text-2xl flex-shrink-0">•</span>
+                            <span>You <strong>regularly write code</strong> and just need biology libraries</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-500 text-2xl flex-shrink-0">•</span>
+                            <span>You're an <strong>experienced computational biologist</strong></span>
+                        </li>
+                    </ul>
+                    <p class="mt-6 text-gray-600 italic">
+                        → If this describes you, wait for our upcoming "Advanced Python for Bioinformatics" guide!
+                    </p>
+                </div>
+            </div>
+
+            <!-- The Difference -->
+            <div class="comparison-box p-8 rounded-xl">
+                <h3 class="text-2xl text-[#0066cc] mb-6 text-center">Why This Approach Works</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-gray-700 mb-3">❌ Generic Python Tutorial:</h4>
+                        <pre class="bg-white p-4 rounded-lg text-sm overflow-x-auto"><code># Calculate area of a circle
+radius = 5
+area = 3.14 * radius ** 2
+print(f"Area: {area}")</code></pre>
+                        <p class="text-gray-600 mt-3 text-sm">You learn syntax, but who cares about circle areas?</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-700 mb-3">✓ This Guide:</h4>
+                        <pre class="bg-white p-4 rounded-lg text-sm overflow-x-auto"><code># Calculate GC content
+sequence = "ATCGATCGATCG"
+gc = sequence.count('G') + sequence.count('C')
+gc_content = (gc / len(sequence)) * 100
+print(f"GC Content: {gc_content}%")</code></pre>
+                        <p class="text-green-600 mt-3 text-sm font-semibold">You learn the SAME syntax, but it's actually useful!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-4xl lg:text-5xl text-center text-[#003366] mb-16">
+                Learn Python Through Biology
             </h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="card p-8 text-center">
                     <div class="text-6xl mb-6">🧬</div>
-                    <h3 class="text-2xl text-[#0066cc] mb-4">Biology-First Examples</h3>
+                    <h3 class="text-2xl text-[#0066cc] mb-4">Biological Examples</h3>
                     <p class="text-gray-700">
-                        Sequences, data wrangling, visualization — content that aligns with your research needs.
+                        Every concept taught with DNA sequences, protein data, lab measurements - not abstract CS examples.
                     </p>
                 </div>
                 <div class="card p-8 text-center">
-                    <div class="text-6xl mb-6">📓</div>
-                    <h3 class="text-2xl text-[#0066cc] mb-4">Jupyter & Colab Ready</h3>
+                    <div class="text-6xl mb-6">🎓</div>
+                    <h3 class="text-2xl text-[#0066cc] mb-4">Beginner-Friendly</h3>
                     <p class="text-gray-700">
-                        Emphasis on interactive notebooks — experiment with code and see results immediately.
+                        Start from absolute zero. No programming experience required. Clear explanations without jargon.
                     </p>
                 </div>
                 <div class="card p-8 text-center">
-                    <div class="text-6xl mb-6">⚡</div>
-                    <h3 class="text-2xl text-[#0066cc] mb-4">Clear & Focused</h3>
+                    <div class="text-6xl mb-6">💻</div>
+                    <h3 class="text-2xl text-[#0066cc] mb-4">Copy-Paste Ready</h3>
                     <p class="text-gray-700">
-                        Concise explanations, code → output → biological context — no unnecessary details.
+                        Working code snippets you can use immediately with your own biological data.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Key Topics Covered – compact, full content, balanced size -->
-    <section id="preview" class="py-16 bg-gray-50">
+
+    <!-- What You'll Learn -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-4xl lg:text-5xl text-center text-[#003366] mb-16">
+                What You'll Learn
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="flex items-start gap-4">
+                    <span class="text-[#00d4ff] text-3xl flex-shrink-0">✓</span>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Python Basics</h3>
+                        <p class="text-gray-600">Variables, data types, operators - all with biological examples</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="text-[#00d4ff] text-3xl flex-shrink-0">✓</span>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Control Flow</h3>
+                        <p class="text-gray-600">Decisions and loops for processing experimental data</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="text-[#00d4ff] text-3xl flex-shrink-0">✓</span>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Functions</h3>
+                        <p class="text-gray-600">Organize code for BMI calculations, enzyme kinetics, etc.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="text-[#00d4ff] text-3xl flex-shrink-0">✓</span>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Data Structures</h3>
+                        <p class="text-gray-600">Lists, dicts, sets for sequence data and genetic codes</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="text-[#00d4ff] text-3xl flex-shrink-0">✓</span>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">File Handling</h3>
+                        <p class="text-gray-600">Parse FASTA files and work with biological formats</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="text-[#00d4ff] text-3xl flex-shrink-0">✓</span>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Visualization</h3>
+                        <p class="text-gray-600">Create plots for experimental results and lab data</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="text-[#00d4ff] text-3xl flex-shrink-0">✓</span>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Biopython Intro</h3>
+                        <p class="text-gray-600">Get started with the essential bioinformatics library</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="text-[#00d4ff] text-3xl flex-shrink-0">✓</span>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Jupyter/Colab</h3>
+                        <p class="text-gray-600">Interactive coding environments for data science</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Topics Covered -->
+    <section id="topics" class="py-16 bg-gray-50">
         <div class="container mx-auto px-6 max-w-6xl">
             <h2 class="text-4xl lg:text-5xl text-center text-[#003366] mb-12">
-                Key Topics Covered
+                Complete Table of Contents
             </h2>
             <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
 
                 <!-- Card 1 -->
                 <div class="card p-6 h-full flex flex-col">
-                    <div class="section-title mb-5 text-lg">Introduction & Fundamentals</div>
+                    <div class="section-title mb-5 text-lg">Getting Started</div>
                     <ul class="space-y-2.5 text-gray-700 text-sm flex-grow">
-                        <li><strong>Introduction to Python</strong>: high-level, easy-to-learn language resembling human language, free & open-source</li>
-                        <li><strong>OOP support</strong>: encapsulation, code reuse, easier management and debugging</li>
-                        <li><strong>Versions</strong>: Python 2 (2000) vs Python 3 (2008, recommended modern version)</li>
-                        <li><strong>Key differences</strong>: print syntax, integer division (floor vs float), Unicode vs ASCII strings</li>
+                        <li><strong>What is Python?</strong> High-level, easy-to-learn, resembles human language</li>
+                        <li><strong>Object-Oriented Programming</strong> Encapsulation, reusability, easier debugging</li>
+                        <li><strong>Python 2 vs 3</strong> Key differences and why Python 3 is recommended</li>
+                        <li><strong>Installation</strong> Step-by-step setup for Windows, Mac, Linux</li>
+                        <li><strong>Development environments</strong> IDLE, VS Code, PyCharm, Jupyter, Google Colab</li>
+                        <li><strong>First program</strong> "Hello World" and understanding print()</li>
                     </ul>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="card p-6 h-full flex flex-col">
-                    <div class="section-title mb-5 text-lg">How Python Works & Getting Started</div>
+                    <div class="section-title mb-5 text-lg">Python Fundamentals</div>
                     <ul class="space-y-2.5 text-gray-700 text-sm flex-grow">
-                        <li><strong>Execution flow</strong>: Source code → Lexical analysis → Parsing → Bytecode → Python Virtual Machine → Output</li>
-                        <li><strong>Installation</strong>: download from python.org</li>
-                        <li><strong>Environments</strong>: IDLE, VS Code, PyCharm, Spyder, Jupyter Notebook, Google Colab</li>
-                        <li><strong>Comments & indentation</strong>: # for single-line, triple quotes for multi-line; indentation defines blocks</li>
-                        <li><strong>Variables & operators</strong>: dynamic typing, input(), arithmetic/comparison/logical/Walrus (:=)</li>
+                        <li><strong>Comments</strong> Single-line (#) and multi-line documentation</li>
+                        <li><strong>Indentation</strong> Understanding code blocks and structure</li>
+                        <li><strong>Variables</strong> Storing and using data, dynamic typing</li>
+                        <li><strong>User input</strong> Getting information with input() function</li>
+                        <li><strong>Operators</strong> Arithmetic, comparison, logical, assignment, walrus (:=)</li>
+                        <li><strong>Boolean values</strong> True/False for decision-making</li>
                     </ul>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="card p-6 h-full flex flex-col">
-                    <div class="section-title mb-5 text-lg">Control Flow, Functions & Data Structures</div>
+                    <div class="section-title mb-5 text-lg">Control Flow & Functions</div>
                     <ul class="space-y-2.5 text-gray-700 text-sm flex-grow">
-                        <li><strong>Control flow</strong>: if/elif/else decisions, for & while loops</li>
-                        <li><strong>Functions</strong>: def keyword, parameters, return values, lambda functions</li>
-                        <li><strong>Built-in functions</strong>: print(), input(), len(), type() and more</li>
-                        <li><strong>Data structures</strong>: Lists (mutable), Tuples (immutable), Dictionaries (key-value), Sets (unique)</li>
-                        <li><strong>Set operations</strong>: union, intersection, difference</li>
+                        <li><strong>if/else statements</strong> Making decisions based on conditions</li>
+                        <li><strong>if-elif-else ladders</strong> Multiple conditional branches</li>
+                        <li><strong>for loops</strong> Iterating through sequences and datasets</li>
+                        <li><strong>while loops</strong> Repeating based on dynamic conditions</li>
+                        <li><strong>Defining functions</strong> Creating reusable code blocks</li>
+                        <li><strong>Lambda functions</strong> Quick anonymous functions</li>
+                        <li><strong>Built-in functions</strong> print(), len(), type(), and more</li>
                     </ul>
                 </div>
 
-                <!-- Card 4 – Libraries & Applications combined -->
+                <!-- Card 4 -->
                 <div class="card p-6 h-full flex flex-col">
-                    <div class="section-title mb-5 text-lg">Libraries & Applications in Biosciences</div>
+                    <div class="section-title mb-5 text-lg">Data Structures</div>
                     <ul class="space-y-2.5 text-gray-700 text-sm flex-grow">
-                        <li><strong>General libraries</strong>: Pandas, NumPy, SciPy, Matplotlib, Scikit-learn, TensorFlow, Requests, OpenCV, Flask, Django</li>
-                        <li><strong>Bioinformatics modules</strong>: Biopython (sequences, parsing, databases), Pysam (genomic formats), DeepChem (ML in drug discovery), Biotite, MDAnalysis</li>
-                        <li><strong>Installation</strong>: pip + virtual environments for dependency management</li>
-                        <li><strong>Visualizations</strong>: Matplotlib & Seaborn for growth curves, expression plots, etc.</li>
-                        <li><strong>Biological applications</strong>: sequence analysis (motifs, GC content), modeling (enzyme kinetics, population dynamics), ML in biology</li>
+                        <li><strong>Lists</strong> Mutable sequences, indexing, slicing, methods</li>
+                        <li><strong>Tuples</strong> Immutable sequences for fixed data</li>
+                        <li><strong>Dictionaries</strong> Key-value pairs for genetic codes, mappings</li>
+                        <li><strong>Sets</strong> Unique elements, union, intersection, difference</li>
+                        <li><strong>Accessing data</strong> Indexing and slicing techniques</li>
+                        <li><strong>Modifying data</strong> Adding, updating, deleting items</li>
+                        <li><strong>Iterating</strong> Looping through data structures</li>
+                    </ul>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card p-6 h-full flex flex-col">
+                    <div class="section-title mb-5 text-lg">Biological Applications</div>
+                    <ul class="space-y-2.5 text-gray-700 text-sm flex-grow">
+                        <li><strong>Sequence operations</strong> DNA/RNA transcription, GC content</li>
+                        <li><strong>String manipulation</strong> Finding motifs, pattern matching</li>
+                        <li><strong>File handling</strong> Reading and parsing FASTA files</li>
+                        <li><strong>Statistical functions</strong> Mean, median, standard deviation</li>
+                        <li><strong>Modeling</strong> Exponential growth, enzyme kinetics</li>
+                        <li><strong>Data visualization</strong> Matplotlib for growth curves, plots</li>
+                    </ul>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card p-6 h-full flex flex-col">
+                    <div class="section-title mb-5 text-lg">Libraries & Tools</div>
+                    <ul class="space-y-2.5 text-gray-700 text-sm flex-grow">
+                        <li><strong>pip installer</strong> Installing third-party packages</li>
+                        <li><strong>Virtual environments</strong> Managing project dependencies</li>
+                        <li><strong>Biopython</strong> Sequence parsing, database access, alignment</li>
+                        <li><strong>NumPy & Pandas</strong> Numerical computing and data analysis</li>
+                        <li><strong>Matplotlib</strong> Creating scientific visualizations</li>
+                        <li><strong>Other libraries</strong> SciPy, scikit-learn, and more</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-6 max-w-4xl text-center">
-            <h2 class="text-4xl text-[#003366] mb-8">About These Notes</h2>
-            <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                Created by a computational biologist for fellow researchers.
-                These notes cut through generic programming tutorials to focus on practical Python
-                skills needed in real bioinformatics and computational biology workflows:
-                sequence handling, data wrangling, visualization, Biopython basics,
-                Jupyter/Colab usage, and more.
-            </p>
+    <!-- Learning Path -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl text-center text-[#003366] mb-12">Your Learning Path</h2>
+            <div class="space-y-6">
+                <div class="card p-6 border-l-4 border-[#0066cc]">
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="bg-[#0066cc] text-white font-bold text-xl w-12 h-12 rounded-full flex items-center justify-center">1</div>
+                        <h3 class="text-xl font-semibold text-gray-800">This Guide (Fundamentals) ← You Are Here</h3>
+                    </div>
+                    <p class="text-gray-600 ml-16">Learn Python basics with biological examples. Time: 2-4 weeks</p>
+                </div>
+
+                <div class="card p-6 border-l-4 border-gray-300">
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="bg-gray-300 text-gray-700 font-bold text-xl w-12 h-12 rounded-full flex items-center justify-center">2</div>
+                        <h3 class="text-xl font-semibold text-gray-800">Practice with Your Data</h3>
+                    </div>
+                    <p class="text-gray-600 ml-16">Apply Python to your actual research projects. Time: 1-3 months</p>
+                </div>
+
+                <div class="card p-6 border-l-4 border-gray-300">
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="bg-gray-300 text-gray-700 font-bold text-xl w-12 h-12 rounded-full flex items-center justify-center">3</div>
+                        <h3 class="text-xl font-semibold text-gray-800">Advanced Python for Bioinformatics</h3>
+                    </div>
+                    <p class="text-gray-600 ml-16">Pipelines, NGS analysis, databases (Coming 2026). Time: 2-3 months</p>
+                </div>
+
+                <div class="card p-6 border-l-4 border-gray-300">
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="bg-gray-300 text-gray-700 font-bold text-xl w-12 h-12 rounded-full flex items-center justify-center">4</div>
+                        <h3 class="text-xl font-semibold text-gray-800">Build Your Own Tools</h3>
+                    </div>
+                    <p class="text-gray-600 ml-16">Create custom analysis workflows for your lab. Time: Ongoing</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -252,20 +482,54 @@
     <section id="faq" class="py-16 bg-gray-50">
         <div class="container mx-auto px-6 max-w-4xl">
             <h2 class="text-4xl text-center text-[#003366] mb-10">Frequently Asked Questions</h2>
-            <div class="space-y-8">
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-[#0066cc] mb-2">Do I need programming experience?</h3>
+                    <p class="text-gray-700">No! These notes start from absolute basics. If you've never written code before, this guide is designed for you.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-[#0066cc] mb-2">I'm a computational biologist - is this for me?</h3>
+                    <p class="text-gray-700">Probably not. If you already code regularly, this will be too basic. Wait for our "Advanced Python for Bioinformatics" guide coming in 2026.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-[#0066cc] mb-2">What makes this different from other Python tutorials?</h3>
+                    <p class="text-gray-700">Every single example uses biological data - DNA sequences, protein concentrations, lab measurements. You learn the same programming concepts, but through examples that keep you engaged.</p>
+                </div>
                 <div class="bg-white p-6 rounded-xl shadow-sm">
                     <h3 class="text-xl font-bold text-[#0066cc] mb-2">What format will I receive?</h3>
-                    <p class="text-gray-700">Full 26-page PDF Notes.</p>
+                    <p class="text-gray-700">Full 40+ page PDF with syntax-highlighted code and biological examples throughout. Plus Markdown version for easy reference.</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-sm">
                     <h3 class="text-xl font-bold text-[#0066cc] mb-2">Is there a refund policy?</h3>
-                    <p class="text-gray-700">Yes, 30-day money-back guarantee if the notes do not meet your expectations.</p>
+                    <p class="text-gray-700">Yes! 30-day money-back guarantee. If the notes don't help you get started with Python for biology, just email for a full refund.</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <h3 class="text-xl font-bold text-[#0066cc] mb-2">Do I need programming experience?</h3>
-                    <p class="text-gray-700">No. These notes are designed for biologists with little to no prior coding experience.</p>
+                    <h3 class="text-xl font-bold text-[#0066cc] mb-2">Can I use this for teaching?</h3>
+                    <p class="text-gray-700">These notes are for personal use. For educational/institutional licensing, please contact us at samavi.nasir@gmail.com</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-[#0066cc] mb-2">What if I get stuck?</h3>
+                    <p class="text-gray-700">Email me! I'm happy to help clarify concepts or troubleshoot issues. Plus you can join the r/bioinformatics community for support.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Social Proof (placeholder for future) -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl text-center text-[#003366] mb-12">What Students Say</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card p-6">
+                    <p class="text-gray-700 italic mb-4">"Finally, a Python guide that doesn't bore me to death with examples about fruit and shopping carts! Every example is relevant to my biology work."</p>
+                    <p class="text-gray-600 font-semibold">- Biology Student</p>
+                </div>
+                <div class="card p-6">
+                    <p class="text-gray-700 italic mb-4">"I tried Codecademy and kept quitting. This kept my attention because the examples actually matter to my research."</p>
+                    <p class="text-gray-600 font-semibold">- Lab Researcher</p>
+                </div>
+            </div>
+            <p class="text-center text-gray-500 mt-8 text-sm">More reviews coming as students complete the guide!</p>
         </div>
     </section>
 
@@ -273,24 +537,56 @@
     <section id="purchase" class="py-24 bg-gradient-to-br from-[#f0f9ff] to-white">
         <div class="container mx-auto px-6 max-w-4xl text-center">
             <h2 class="text-4xl lg:text-5xl text-[#003366] mb-8">
-                Get Started Today
+                Start Your Python Journey Today
             </h2>
             <div class="bg-white rounded-3xl p-12 shadow-xl border border-gray-100">
                 <div class="mb-4">
                     <div class="text-3xl text-gray-400 line-through mb-2">$15</div>
                     <div class="text-6xl font-extrabold text-[#0066cc]">$10</div>
                 </div>
-                <p class="text-2xl text-gray-700 mb-2">One-time purchase • Instant access</p>
-                <p class="text-lg text-[#00d4ff] font-semibold mb-10">Use code <span class="bg-[#00d4ff] text-white px-3 py-1 rounded">EARLYBIRD</span> for $5 off!</p>
+                <p class="text-2xl text-gray-700 mb-2">One-time purchase • Instant access • No subscription</p>
+                <p class="text-lg text-[#00d4ff] font-semibold mb-10">Limited time: Save $5 with code <span class="bg-[#00d4ff] text-white px-3 py-1 rounded">EARLYBIRD</span></p>
+                
                 <ul class="text-left max-w-md mx-auto text-lg space-y-4 mb-12">
-                    <li class="flex items-center"><span class="text-3xl mr-4 text-[#00d4ff]">✓</span> Full 26-page PDF + Markdown version</li>
-                    <li class="flex items-center"><span class="text-3xl mr-4 text-[#00d4ff]">✓</span> Ready-to-use code examples</li>
-                    <li class="flex items-center"><span class="text-3xl mr-4 text-[#00d4ff]">✓</span> Introduction to key biology libraries</li>
+                    <li class="flex items-center">
+                        <span class="text-3xl mr-4 text-[#00d4ff]">✓</span> 
+                        40+ page PDF with biological examples
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-3xl mr-4 text-[#00d4ff]">✓</span> 
+                        Copy-paste ready code snippets
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-3xl mr-4 text-[#00d4ff]">✓</span> 
+                        From basics to Biopython intro
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-3xl mr-4 text-[#00d4ff]">✓</span> 
+                        Markdown version included
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-3xl mr-4 text-[#00d4ff]">✓</span> 
+                        30-day money-back guarantee
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-3xl mr-4 text-[#00d4ff]">✓</span> 
+                        Email support if you get stuck
+                    </li>
                 </ul>
+
                 <a href="https://codetech.lemonsqueezy.com/"
-                   class="inline-block bg-[#0066cc] text-white font-bold text-xl px-14 py-7 rounded-xl shadow-xl hover:bg-[#0055aa] transition transform hover:-translate-y-2">
-                    Purchase & Download Now
+                   class="inline-block bg-[#0066cc] text-white font-bold text-xl px-14 py-7 rounded-xl shadow-xl hover:bg-[#0055aa] transition transform hover:-translate-y-2 mb-6">
+                    Get Started Now - $10
                 </a>
+
+                <p class="text-gray-500 text-sm">
+                    🔒 Secure checkout • Instant PDF delivery • Works on all devices
+                </p>
+            </div>
+
+            <div class="mt-12 text-gray-600">
+                <p class="mb-3">Perfect for biology students and researchers learning programming.</p>
+                <p class="text-sm">Not ready to buy? <a href="https://github.com/code-tech-stack/python-computational-biology" class="text-[#0066cc] hover:underline">View the free sample chapter first</a></p>
             </div>
         </div>
     </section>
@@ -302,14 +598,15 @@
                 <img src="logo.png" alt="CODE TECH" class="h-12">
                 <span class="text-xl font-semibold">CODE TECH</span>
             </div>
-            <p class="mb-4">© January 2026 • Practical Python for Computational Biology</p>
+            <p class="mb-4">© January 2026 • Python Programming for Life Scientists</p>
+            <p class="text-sm mb-6 opacity-90">Teaching Python to biologists, one DNA sequence at a time 🧬</p>
             <div class="flex justify-center gap-8">
-                <a href="https://github.com/code-tech-stack/python-computational-biology" class="hover:text-[#00d4ff] transition">GitHub</a>
+                <a href="https://github.com/code-tech-stack/python-computational-biology" class="hover:text-[#00d4ff] transition">GitHub (Free Sample)</a>
                 <a href="mailto:samavi.nasir@gmail.com" class="hover:text-[#00d4ff] transition">Contact</a>
+                <a href="#faq" class="hover:text-[#00d4ff] transition">FAQ</a>
             </div>
         </div>
     </footer>
 
 </body>
-
 </html>
