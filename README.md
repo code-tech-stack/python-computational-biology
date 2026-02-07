@@ -1,4 +1,4 @@
-# The Guide is available on: https://code-tech-stack.github.io/python-computational-biology/
+The Guide is available on: https://code-tech-stack.github.io/python-computational-biology/
 
 # Who This Guide Is For
 
